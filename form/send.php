@@ -3,12 +3,11 @@ include("conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(
-        // Permitir que 'mensaje' sea opcional
         !empty($_POST['nombre']) &&
         !empty($_POST['telefono']) &&
         !empty($_POST['email']) &&
         !empty($_POST['asunto']) &&
-        isset($_POST['consentimiento']) // Comprobamos que el consentimiento está presente
+        isset($_POST['consentimiento']) 
     ) {
         $nombre = trim($_POST['nombre']);
         $telefono = trim($_POST['telefono']);
