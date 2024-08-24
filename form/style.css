@@ -104,7 +104,7 @@ h1,h2,h3 {
 
 .formulario {
     background-color: var(--gris);
-    width: min( 60rem, 100%); /** Utilizar el valor mas pequeño **/
+    width: min( 60rem, 100%); 
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -126,34 +126,34 @@ h1,h2,h3 {
 @media (min-width: 768px) {
     .contenedor-campos {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-        gap: 1rem; /* Espacio entre columnas y filas */
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem; 
     }
 
-    /* "Nombre y Apellido" y "Teléfono" en la misma fila */
+    /* Nombre y Apellidot y teléfono en la misma fila */
     .campo:nth-child(1),
     .campo:nth-child(2) {
-        grid-column: span 1; /* Ocupan una columna cada uno */
+        grid-column: span 1; 
     }
 
-    /* "Correo Electrónico" ocupa toda la fila (2 columnas) */
+    /* Correo Electrónico ocupa toda la fila  */
     .campo:nth-child(3) {
-        grid-column: 1 / -1; /* Se extiende desde la columna 1 hasta el final */
+        grid-column: 1 / -1; 
     }
 
-    /* "Asunto" ocupa toda la fila (2 columnas) */
+    /* Asunto ocupa toda la fila  */
     .campo:nth-child(4) {
-        grid-column: 1 / -1; /* Se extiende desde la columna 1 hasta el final */
+        grid-column: 1 / -1; 
     }
 
-    /* "Mensaje" ocupa toda la fila (2 columnas) */
+    /* mensaje ocupa toda la fila */
     .campo:nth-child(5) {
-        grid-column: 1 / -1; /* Se extiende desde la columna 1 hasta el final */
+        grid-column: 1 / -1; 
     }
 
-    /* Checkbox en una nueva fila debajo del "Mensaje" */
+    /* Checkbox en una nueva fila debajo del Mensaje */
     .campo:nth-child(6) {
-        grid-column: 1 / -1; /* Se extiende desde la columna 1 hasta el final */
+        grid-column: 1 / -1; 
     }
 }
 
