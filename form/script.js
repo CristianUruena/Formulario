@@ -9,7 +9,7 @@ document.getElementById('contacform').addEventListener('submit', function(event)
     var mensaje = document.getElementById('mensaje').value.trim();
     var consentimiento = document.querySelector('input[name="consentimiento"]').checked;
 
-    // Cambiar aquí: Eliminar 'mensaje === '''
+   
     if (nombre === '' || telefono === '' || email === '' || asunto === '' || !consentimiento) {
         alert('Por favor, completa todos los campos obligatorios.');
         return;
@@ -21,10 +21,10 @@ document.getElementById('contacform').addEventListener('submit', function(event)
     formData.append('telefono', telefono);
     formData.append('email', email);
     formData.append('asunto', asunto);
-    formData.append('mensaje', mensaje); // También se mandará el mensaje, aunque sea vacío
+    formData.append('mensaje', mensaje); 
     formData.append('consentimiento', consentimiento);
 
-    // Enviar datos usando AJAX
+    // Enviar datos
     fetch('send.php', {
         method: 'POST',
         body: formData
@@ -33,7 +33,7 @@ document.getElementById('contacform').addEventListener('submit', function(event)
     .then(data => {
         // Mostrar mensaje de envío
         var formMessage = document.getElementById('formMessage');
-        formMessage.innerHTML = data; // Mensaje del servidor (puedes personalizarlo)
+        formMessage.innerHTML = data;
         formMessage.style.display = 'block';
 
         // Reiniciar el formulario
